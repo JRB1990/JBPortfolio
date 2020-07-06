@@ -64,3 +64,11 @@ header h3 {
 .fa-github {
     font-size: 28px;
 }
+
+.bg-gold {
+    background-color:gold;
+}
+
+.text-gold {
+    color:gold;
+}
