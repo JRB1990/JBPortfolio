@@ -1,5 +1,25 @@
-body {
+body, html {
+    height: 100%;
+    margin: 0;
     font-family: 'Karla', sans-serif;
+    font-size: 1.25rem;
+  }
+
+#bg {
+    background-image: url("../img/background.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: white;
 }
 
 h1, h2, h3, h5 {
@@ -14,25 +34,6 @@ header h3 {
     color: gold;
 }
 
-#siteLogo {
-    border-radius: 50%;
-}
-
-.site-footer {
-    background-image: linear-gradient(#ff335f, white);
-    padding: 20px 0;
-}
-
-.jumbotron {
-    margin: 0;
-    padding: 30px;
-    background-image: linear-gradient(to right, #ff335f, #ff3333, #ff6333);
-    color: white;
-}
-
-.container-fill {
-    max-width: 100%;
-}
 .row-content {
     padding: 50px 0;
     border-bottom: 1px ridge;
@@ -41,34 +42,4 @@ header h3 {
 
 .navbar {
     background-color: #007bff;
-}
-
-.tab-content {
-    border: 1px solid #DDD;
-    border-top: none;
-    padding: 10px;
-}
-
-.carousel-caption  {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.carousel {
-    border: solid #5637DD;
-}
-
-.btn-gold {
-    background-color: gold;
-}
-
-.fa-github {
-    font-size: 28px;
-}
-
-.bg-gold {
-    background-color:gold;
-}
-
-.text-gold {
-    color:gold;
 }
