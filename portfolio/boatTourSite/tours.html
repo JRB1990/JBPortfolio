@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+        <!-- Additional CSS must be placed after Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans" />
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <title>Jellyfish Tours</title>
+    </head>
+
+<body>
+
+    <header class="jumbotron jumbotron-fluid bg-img">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 col-md-1 align-self-center">
+                    <img id="siteLogo" src="img/sitelogo.png" class="img-fluid" />
+                </div>
+                <div class="col">
+                    <h1>Jellyfish Tours</h1>
+                    <h2>Don't be jelly...</h2>
+                </div>
+                <div class="col-md-4 col-xl-2">
+                    <a href="#bookingModal" class="btn btn-purple btn-lg mt-4 text-white" data-toggle="modal" data-target="#bookingModal">Book your tour here</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="bookingModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h3 class="modal-title">Book a tour</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form id="bookingForm">
+                            <div class="form-group row">
+                                <label for="numPass" class="col-sm col-form-label">Number of passengers</label>
+                                <div class="col-sm">
+                                    <select name="numPass" id="numPass" class="form-control">
+                                        <option value="0">Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="date" class="col-sm col-form-label">Date</label>
+                                <div class="col-sm">
+                                    <input class="form-control" type="date" id="date" name="date" placeholder="mm/dd/yyyy" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">
+                                    Tour type
+                                </label>
+                                <div class="col btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="tourLength" id="lengthFull" autocomplete="off" checked> Full-day
+                                    </label>
+                                    <label class="btn btn-warning">
+                                        <input type="radio" name="tourLength" id="lengthHalf" autocomplete="off"> Half-day
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="tourLength" id="lengthWend" autocomplete="off"> Weekend trip
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#jellyNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="jellyNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-ship fa-lg"></i> Tours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="people.html"><i class="fa fa-users fa-lg"></i> People</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html"><i class="fa fa-star fa-lg"></i> Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galleryModal" data-toggle="modal" data-target="#galleryModal"><i class="fa fa-camera fa-lg"></i> Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="galleryModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-purple text-white">
+                    <h3 class="modal-title">Gallery</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="container container-fill">
+                        <div class="row">
+                            <div class="col p-0">
+                                <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#homeCarousel" data-slide-to="1"></li>
+                                        <li data-target="#homeCarousel" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="img/kangaroo.jpg" alt="kangaroo" />
+                                            <div class="carousel-caption">
+                                                <h3>ANIMALS</h3>
+                                                <p class="d-none d-sm-block">Something about wildlife</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="img/friends.jpg" alt="friends" />
+                                            <div class="carousel-caption">
+                                                <h3>FRIENDS</h3>
+                                                <p class="d-none d-sm-block">Something about friendships</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="img/sights.jpg" alt="sights" />
+                                            <div class="carousel-caption">
+                                                <h3>SIGHTS</h3>
+                                                <p class="d-none d-sm-block">Something about seeing the sights</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Tours</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Half day packages</h3>
+            </div>
+        </div>
+        <div class="row rowCards">
+            <div class="col-md">
+                <div class="card h-100">
+                    <img class="card-img-top" src="img/hdTour1.jpg" alt="hdTour1">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Half day tour package 1</h5>
+                      <p class="card-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                      <button type="button" class="btn btn-purple btn-sm mt-auto text-white">Starting at $30 - Book now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card h-100">
+                    <img class="card-img-top" src="img/hdTour2.jpg" alt="hdTour2">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Half day tour package 2</h5>
+                      <p class="card-text">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                      <button type="button" class="btn btn-purple btn-sm mt-auto text-white">Starting at $40pp - Book now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card h-100">
+                    <img class="card-img-top" src="img/hdTour3.jpg" alt="hdTour3">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Half day tour package 3</h5>
+                      <p class="card-text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                      <button type="button" class="btn btn-purple btn-sm mt-auto text-white">Starting at $50pp - Book now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card h-100">
+                    <img class="card-img-top" src="img/hdTour4.jpg" alt="hdTour4">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Half day tour package 4</h5>
+                      <p class="card-text">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                      <button type="button" class="btn btn-purple btn-sm mt-auto text-white">Starting at $60pp - Book now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Full day packages</h3>
+            </div>
+        </div>
+        <div class="row rowCards">
+            <div class="col-md">
+                <div class="card h-100">
+                    <img class="card-img-top" src="img/fdTour1.jpg" alt="fdTour1">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Full day tour package 1</h5>
+                      <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                      <button type="button" class="btn btn-purple btn-sm mt-auto text-white">Starting at $99pp - Book now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card h-100">
+                    <img class="card-img-top" src="img/fdTour2.jpg" alt="fdTour2">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Full day tour package 2</h5>
+                      <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+                      <button type="button" class="btn btn-purple btn-sm mt-auto text-white">Starting at $119pp - Book now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card h-100">
+                    <img class="card-img-top" src="img/fdTour3.jpg" alt="fdTour3">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Full day tour package 3</h5>
+                      <p class="card-text">Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                      <button type="button" class="btn btn-purple btn-sm mt-auto text-white">Starting at $149pp - Book now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Weekend packages</h3>
+            </div>
+        </div>
+        <div class="row rowCards">
+            <div class="col-md">
+                <div class="card h-100">
+                    <img class="card-img-top" src="img/weTour1.jpg" alt="weTour1">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Full day tour package 1</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      <button type="button" class="btn btn-purple btn-sm mt-auto text-white">Starting at $200pp - Book now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card h-100">
+                    <img class="card-img-top" src="img/weTour2.jpg" alt="weTour2">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Full day tour package 2</h5>
+                      <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <button type="button" class="btn btn-purple btn-sm mt-auto text-white">Starting at $300pp - Book now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer bg-img">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 col-sm-2 text-center">
+                    <h5>Social</h5>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="col">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item"><a href="index.html">Home |</a></li>
+                        <li class="list-inline-item"><a href="#">Tours |</a></li>
+                        <li class="list-inline-item"><a href="people.html">People |</a></li>
+                        <li class="list-inline-item"><a href="reviews.html">Reviews |</a></li>
+                        <li class="list-inline-item"><a href="#galleryModal" data-toggle="modal" data-target="#galleryModal">Gallery |</a></li>
+                        <li class="list-inline-item"><a href="contactus.html">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br>
+            	    <a role="button" class="btn btn-link" href="mailto:tours@jellyfish.co"><i class="fa fa-envelope-o"></i> tours@jellyfish.co</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
