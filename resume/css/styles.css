@@ -76,3 +76,10 @@ h3 {
 a {
     color: white;
 }
+
+#homeSticky {
+    border-radius: 50%;
+    background-color: #819550;
+    background-size: contain;
+    color: white;
+}

@@ -2,6 +2,14 @@ html {
     font-size: 0.5rem;
 }
 
+body {
+    background-image: url("../../img/background.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media (min-width: 576px) {
     html {
         font-size: 0.6rem;
@@ -33,12 +41,22 @@ h1, h2, h3, h5 {
     font-family: 'Karla', sans-serif;
 }
 
+.headings {
+    color: white;
+    background-color: #AFC2CC;
+    opacity: 0.9;
+}
+
 h2 {
     color: black;
 }
 
 header h3 {
-    color: gold;
+    color: white;
+}
+
+.card-header {
+    background-color: #819550;
 }
 
 #siteLogo {
@@ -46,21 +64,14 @@ header h3 {
 }
 
 .site-footer {
-    background-image: linear-gradient(#ff335f, white);
     padding: 20px 0;
-}
-
-.jumbotron {
-    margin: 0;
-    padding: 30px;
-    background-image: linear-gradient(to right, #ff335f, #ff3333, #ff6333);
-    color: white;
 }
 
 #homeSticky {
     border-radius: 20%;
-    background-image: url("../../img/background.jpg");
+    background-color: #819550;
     background-size: contain;
+    color: white;
 }
 
 .container-fill {
@@ -70,38 +81,4 @@ header h3 {
     padding: 50px 0;
     border-bottom: 1px ridge;
     min-height: 200px;
-}
-
-.navbar {
-    background-color: #007bff;
-}
-
-.tab-content {
-    border: 1px solid #DDD;
-    border-top: none;
-    padding: 10px;
-}
-
-.carousel-caption  {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.carousel {
-    border: solid #5637DD;
-}
-
-.btn-gold {
-    background-color: gold;
-}
-
-.bg-gold {
-    background-color:gold;
-}
-
-.text-gold {
-    color:gold;
-}
-
-.btn-social-icon {
-    font-size: 24px;
 }
